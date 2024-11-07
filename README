@@ -9,3 +9,5 @@ AGENDA
 1. Layout Components
    
    Components should not know where they are being displayed.
+   Components passed as children, not as props.
+   Props passed directly into Components.
