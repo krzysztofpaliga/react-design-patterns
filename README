@@ -16,3 +16,7 @@ AGENDA
 
    Component (like SmallPersonListItem) type can be passed to a List (like RegularList)
    Resource (like person) name can be passed as props name.
+
+3. Modals
+
+   Well structured Component (like SmallPersonDetails/SmallPersonListItem) can be used inside both, a Modal and a List.
