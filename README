@@ -27,3 +27,18 @@ AGENDA
    Our Components (besides Container Components) should not know where their data is coming from.
    Generic type of Loader to load any type of resource from the server.
    Taking it even one step further: DataSource Component, which does not even know where its data is coming from. (getDataFunc passed as prop)
+
+5. Controlled vs. Uncontrolled Components
+
+   Uncontrolled Components
+   Components that keep track of their own states and release data only when some event occurs.
+   (that is, the submit event for HTML forms)
+
+   Controlled Components
+   Components that do not keep track of their own state - all state is passed in as props.
+   (that is, we use the useState Hook with text inputs)
+
+   How do we choose?
+   We _generally_ prefer controlled components, which are usually more reusable and easier to test.
+
+   Most commonly used are controlled/uncontrolled forms or onboarding flows.
