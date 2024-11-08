@@ -20,3 +20,10 @@ AGENDA
 3. Modals
 
    Well structured Component (like SmallPersonDetails/SmallPersonListItem) can be used inside both, a Modal and a List.
+
+4. Container Components
+
+   Components that take care of loading and managing data for their child Components.
+   Our Components (besides Container Components) should not know where their data is coming from.
+   Generic type of Loader to load any type of resource from the server.
+   Taking it even one step further: DataSource Component, which does not even know where its data is coming from. (getDataFunc passed as prop)
