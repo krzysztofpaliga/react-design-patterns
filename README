@@ -6,39 +6,48 @@ https://youtube.com/watch?v=iOSKV2rmj-A&list=PLWMB5IYAuU6fWmpFofddsd2E67w_iVxYN&
 
 AGENDA
 
-1. Layout Components
+1.  Layout Components
 
-   Components should not know where they are being displayed.
-   Components passed as children, not as props.
-   Props passed directly into Components.
+    Components should not know where they are being displayed.
+    Components passed as children, not as props.
+    Props passed directly into Components.
 
-2. Lists and List Items
+2.  Lists and List Items
 
-   Component (like SmallPersonListItem) type can be passed to a List (like RegularList)
-   Resource (like person) name can be passed as props name.
+    Component (like SmallPersonListItem) type can be passed to a List (like RegularList)
+    Resource (like person) name can be passed as props name.
 
-3. Modals
+3.  Modals
 
-   Well structured Component (like SmallPersonDetails/SmallPersonListItem) can be used inside both, a Modal and a List.
+    Well structured Component (like SmallPersonDetails/SmallPersonListItem) can be used inside both, a Modal and a List.
 
-4. Container Components
+4.  Container Components
 
-   Components that take care of loading and managing data for their child Components.
-   Our Components (besides Container Components) should not know where their data is coming from.
-   Generic type of Loader to load any type of resource from the server.
-   Taking it even one step further: DataSource Component, which does not even know where its data is coming from. (getDataFunc passed as prop)
+    Components that take care of loading and managing data for their child Components.
+    Our Components (besides Container Components) should not know where their data is coming from.
+    Generic type of Loader to load any type of resource from the server.
+    Taking it even one step further: DataSource Component, which does not even know where its data is coming from. (getDataFunc passed as prop)
 
-5. Controlled vs. Uncontrolled Components
+5.  Controlled vs. Uncontrolled Components
 
-   Uncontrolled Components
-   Components that keep track of their own states and release data only when some event occurs.
-   (that is, the submit event for HTML forms)
+    Uncontrolled Components
+    Components that keep track of their own states and release data only when some event occurs.
+    (that is, the submit event for HTML forms)
 
-   Controlled Components
-   Components that do not keep track of their own state - all state is passed in as props.
-   (that is, we use the useState Hook with text inputs)
+    Controlled Components
+    Components that do not keep track of their own state - all state is passed in as props.
+    (that is, we use the useState Hook with text inputs)
 
-   How do we choose?
-   We _generally_ prefer controlled components, which are usually more reusable and easier to test.
+    How do we choose?
+    We _generally_ prefer controlled components, which are usually more reusable and easier to test.
 
-   Most commonly used are controlled/uncontrolled forms or onboarding flows.
+    Most commonly used are controlled/uncontrolled forms or onboarding flows.
+
+6.  Higher-Order Components (HOCs)
+
+    A Higher-Order Component returns another Component instead of JSX.
+    Remember! Higher-Order Components are just functions.
+    Used for:
+
+         - Sharing complex behavior between multiple Components (much like with Container Components)
+         - Adding extra functionality to existing Components. (for example: withUser.jsx, withEditableResource.jsx)
